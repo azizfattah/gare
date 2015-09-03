@@ -857,8 +857,12 @@ module ApplicationHelper
       stylesheet = community.custom_stylesheet_url
       is_uri?(stylesheet)  ? stylesheet : "/assets/#{stylesheet}"
     else
-      'application'
-    end
+      if ["ar"].include?(I18n.locale.to_s)
+       "application.rtl"
+      else
+       'application'
+   end
+  end
 
     block.call(stylesheet_url)
   end
@@ -890,5 +894,9 @@ module ApplicationHelper
     else
       content_for :extra_javascript do js end
     end
+  end
+
+  def current_direction
+    I18n.locale.to_s == 'ar' ? 'rtl' : ''
   end
 end

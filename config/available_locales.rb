@@ -9,6 +9,7 @@ module Sharetribe
 
   # List of locales that are completely or almost completely translated
   SUPPORTED_LOCALES = [
+    {ident: "ar", name: "العربية", language: "ar", region: "SA", fallback: nil}, # Arabic (Saudi Arabia)
     {ident: "da-DK", name: "Dansk", language: "da", region: "DK", fallback: nil}, # Danish (Denmark)
     {ident: "de", name: "Deutsch", language: "de", region: "DE", fallback: nil}, # German (Germany)
     {ident: "el", name: "Ελληνικά", language: "el", region: "GR", fallback: nil}, # Greek (Greece)
